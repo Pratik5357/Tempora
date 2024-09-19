@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Lato", sans-serif;
+    height: 100vh;
+    background: #934F9E;
+    background: linear-gradient(135deg, #934F9E, #D87CD9);
+    display: grid;
+    place-content: center;
+}
+
+.container{
+    width: 400px;
+    max-height: 600px;
+    background-color: white;
+    border-radius: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1.6rem 1.5rem;
+    box-shadow: 10px 10px 30px rgba(43, 41, 41, 0.627), -10px -10px 30px rgba(253, 224, 248, 0.445);
+    transition: max-height 0.5s ease-in-out;
+}
+.container #head{
+    font-family: "Poppins", sans-serif;
+    /* color: #732F7C; */
+    /* color: #2E3A87; */
+    color: #934F9E;
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.433);
+}
+
+.input-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.input-container input{
+    width: calc(90% - 55px);
+    height: 45px;
+    border-radius: 1.5rem 0 0 1.5rem;
+    border: none;
+    background-color: #F2F2F2;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+.input-container input::placeholder{
+    color: #B3B3B3;
+    font-size: 1rem;
+}
+input:focus,input:valid{
+    font-size: 1.2rem;
+    color:#934F9E;
+}
+
+.input-container button{
+    width: 55px;
+    height: 45px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #934F9E;
+    border-radius: 0 1.5rem 1.5rem 0;
+    border: none;
+    display: grid;
+    place-items: center;
+}
+
+.active {
+    height: 0;
+    overflow: hidden; 
+    transition: height 0.5s ease-in-out; 
+    background-color: #934F9E;
+}
+
+
+.active.show {
+    height: 300px;
+    overflow: visible; 
+    background-color: #934F9E;
+}
+
+.active .data-head{
+    font-size: 2rem;
+    color: #fff;
+}
