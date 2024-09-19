@@ -1,4 +1,5 @@
 Write JavaScript herelet API_KEY = "9155b61e49b1fc170c759b7874d15dc2";
+let API_KEY="9155b61e49b1fc170c759b7874d15dc2";
 
 let main = document.querySelector(".active");
 let btn = document.querySelector("#Search");
