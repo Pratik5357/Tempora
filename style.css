@@ -31,10 +31,10 @@ body{
     font-family: "Poppins", sans-serif;
     /* color: #732F7C; */
     /* color: #2E3A87; */
-    color: #934F9E;
+    color: #c344c5;
     font-size: 2.3rem;
     font-weight: 700;
-    text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.433);
+    text-shadow: 3px 3px 20px rgba(213, 76, 218, 0.433);
 }
 
 .input-container{
@@ -69,28 +69,89 @@ input:focus,input:valid{
     height: 45px;
     font-size: 1.3rem;
     color: white;
-    background-color: #934F9E;
+    background-color: #cb4cde;
     border-radius: 0 1.5rem 1.5rem 0;
     border: none;
     display: grid;
     place-items: center;
 }
 
-.active {
+.Info {
     height: 0;
+    opacity: 0;
     overflow: hidden; 
-    transition: height 0.5s ease-in-out; 
-    background-color: #934F9E;
+    transition: all 1.5s ease; 
+    background-color: #D87CD9;
+    margin-bottom: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 5px 5px 10px rgba(43, 41, 41, 0.627) inset, -5px -5px 10px rgba(143, 143, 143, 0.445)inset;
 }
 
 
-.active.show {
+.Info.show {
+    opacity: 1;
     height: 300px;
+    width: 90%;
     overflow: visible; 
-    background-color: #934F9E;
+    background-color: #D87CD9;
 }
 
-.active .data-head{
+.Info .data-head{
     font-size: 2rem;
     color: #fff;
+}
+.Info .temp{
+    color: white;
+    font-size: 1.3rem;
+}
+.data{
+    color: white; 
+}
+
+.temp2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+.minT{
+    border-right: 2px solid white;
+}
+.maxT,.minT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.maxT i{
+    margin-left: 10px;
+}
+.minT i{
+    margin-left: 10px;
+}
+
+.wind i{
+    margin-left: 5px;   
+}
+
+.coord{
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+.lon,.lat{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+}
+.lon{
+    border-right: 2px solid white;
 }
