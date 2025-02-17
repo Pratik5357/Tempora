@@ -2,19 +2,24 @@ let API_KEY = "9155b61e49b1fc170c759b7874d15dc2";
 
 let main = document.querySelector(".Info");
 let btn = document.querySelector("#Search");
-
-// btn.addEventListener("click",()=>{
-//     main.style.display = "block";
-// });
-
+let isloading = true;
 
 btn.addEventListener("click", () => {
     let city = document.querySelector('input').value;
+    let loader = document.querySelector('.loader');
+    isloading=true;
+    if(isloading){
+        loader.classList.add('active');
+    }
     if (city) {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)
         .then(response => response.json())
         .then(data => {
             console.log(data);
+            isloading=false;
+            console.log(isloading);
+            
+            loader.classList.remove('active');
             if (data.cod === 200) {
                 main.innerHTML = `
                     <h2 class="data-head">${data.name}, ${data.sys.country}</h2>
@@ -38,4 +43,6 @@ btn.addEventListener("click", () => {
         main.innerHTML = `<p>Please enter a city name.</p>`;
         main.classList.add("show");
     }
+    
+    
 });
