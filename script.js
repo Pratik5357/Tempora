@@ -43,6 +43,4 @@ btn.addEventListener("click", () => {
         main.innerHTML = `<p>Please enter a city name.</p>`;
         main.classList.add("show");
     }
-    
-    
 });
